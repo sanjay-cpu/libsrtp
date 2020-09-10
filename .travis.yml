@@ -24,9 +24,10 @@ matrix:
             - valgrind
       before_install:
         - unset PYENV_ROOT
-        - curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
+          #        - curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
         - export PATH="$HOME/.pyenv/bin:$PATH"
       install:
+        - curl https://pyenv.run | bash
         - pyenv global 3.7.1
         - pip3 install meson ninja
       script:
@@ -59,10 +60,11 @@ matrix:
             - valgrind
       before_install:
         - unset PYENV_ROOT
-        - curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
+          #- curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
         - export PATH="$HOME/.pyenv/bin:$PATH"
 
       install:
+        - cyyurl https://pyenv.run | bash
         - pyenv global 3.7.1
         - pip3 install meson ninja
       script:
@@ -97,9 +99,10 @@ matrix:
             - clang
       before_install:
         - unset PYENV_ROOT
-        - curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
+          #- curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
         - export PATH="$HOME/.pyenv/bin:$PATH"
       install:
+        - curl https://pyenv.run | bash
         - pyenv global 3.7.1
         - pip3 install meson ninja
       script:
@@ -126,9 +129,10 @@ matrix:
             - libnss3-dev
       before_install:
         - unset PYENV_ROOT
-        - curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
+          #- curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
         - export PATH="$HOME/.pyenv/bin:$PATH"
       install:
+        - curl https://pyenv.run | bash
         - pyenv global 3.7.1
         - pip3 install meson ninja
       script:
@@ -274,6 +278,8 @@ matrix:
 
     # coverity scan
     - os: linux
+      arch:
+        - ppc64le
       env:
         - TEST="Coverity Scan"
       addons:
@@ -369,9 +375,10 @@ matrix:
         - TEST="android"
       before_install:
         - unset PYENV_ROOT
-        - curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
+          #- curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
         - export PATH="$HOME/.pyenv/bin:$PATH"
       install:
+        - curl https://pyenv.run | bash
         - pyenv global 3.7.1
         - pip3 install meson ninja
       script:
