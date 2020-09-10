@@ -22,6 +22,10 @@ matrix:
           packages:
             - gcc-6
             - valgrind
+      before_install:
+        - unset PYENV_ROOT
+        - curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
+        - export PATH="$HOME/.pyenv/bin:$PATH"
       install:
         - pyenv global 3.7.1
         - pip3 install meson ninja
@@ -53,6 +57,11 @@ matrix:
           packages:
             - gcc-6
             - valgrind
+      before_install:
+        - unset PYENV_ROOT
+        - curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
+        - export PATH="$HOME/.pyenv/bin:$PATH"
+
       install:
         - pyenv global 3.7.1
         - pip3 install meson ninja
@@ -86,6 +95,10 @@ matrix:
         apt:
           packages:
             - clang
+      before_install:
+        - unset PYENV_ROOT
+        - curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
+        - export PATH="$HOME/.pyenv/bin:$PATH"
       install:
         - pyenv global 3.7.1
         - pip3 install meson ninja
@@ -111,6 +124,10 @@ matrix:
             - gcc-6
             - valgrind
             - libnss3-dev
+      before_install:
+        - unset PYENV_ROOT
+        - curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
+        - export PATH="$HOME/.pyenv/bin:$PATH"
       install:
         - pyenv global 3.7.1
         - pip3 install meson ninja
@@ -350,6 +367,10 @@ matrix:
         - ppc64le
       env:
         - TEST="android"
+      before_install:
+        - unset PYENV_ROOT
+        - curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
+        - export PATH="$HOME/.pyenv/bin:$PATH"
       install:
         - pyenv global 3.7.1
         - pip3 install meson ninja
