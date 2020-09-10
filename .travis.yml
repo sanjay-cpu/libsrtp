@@ -11,6 +11,8 @@ matrix:
 
     # linux build
     - os: linux
+      arch:
+        - ppc64le
       env:
         - TEST="linux (gcc / valgrind)"
       addons:
@@ -40,6 +42,8 @@ matrix:
 
     # linux build with openssl
     - os: linux
+      arch:
+        - ppc64le
       env:
         - TEST="linux openssl (gcc / valgrind)"
       addons:
@@ -74,6 +78,8 @@ matrix:
 
     # linux build with openssl and clang
     - os: linux
+      arch:
+        - ppc64le
       env:
         - TEST="linux openssl (clang)"
       addons:
@@ -93,6 +99,8 @@ matrix:
 
     # linux build with nss
     - os: linux
+      arch:
+        - ppc64le
       env:
         - TEST="linux nss (gcc / valgrind)"
       addons:
@@ -174,6 +182,8 @@ matrix:
 
     # code format check
     - os: linux
+      arch:
+        - ppc64le
       env:
         - TEST="clang-format"
       addons:
@@ -185,6 +195,8 @@ matrix:
 
     # big-endian
     - os: linux
+      arch:
+        - ppc64le
       env:
         - TEST="big-endian"
       services:
@@ -231,6 +243,8 @@ matrix:
 
     # linux build of fuzzer
     - os: linux
+      arch:
+        - ppc64le
       env:
         - TEST="fuzzer (build only)"
       addons:
@@ -332,6 +346,8 @@ matrix:
 
     # android build
     - os: linux
+      arch:
+        - ppc64le
       env:
         - TEST="android"
       install:
